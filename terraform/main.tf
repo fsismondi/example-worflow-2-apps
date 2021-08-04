@@ -6,7 +6,7 @@ module "cluster" {
   extra_app_projects = [
     {
       metadata = {
-        name      = "argo-app-proj-dev"
+        name      = "env-dev"
         namespace = "argocd"
       }
       spec = {
@@ -30,7 +30,7 @@ module "cluster" {
     },
     {
       metadata = {
-        name      = "argo-app-proj-int"
+        name      = "env-int"
         namespace = "argocd"
       }
       spec = {
@@ -54,7 +54,7 @@ module "cluster" {
     },
     {
       metadata = {
-        name      = "argo-app-proj-prod"
+        name      = "env-prod"
         namespace = "argocd"
       }
       spec = {
@@ -81,7 +81,7 @@ module "cluster" {
   extra_application_sets = [
     {
       metadata = {
-        name      = "argo-app-set-dev"
+        name      = "env-dev"
         namespace = "argocd"
 
         annotations = {
@@ -110,7 +110,7 @@ module "cluster" {
           }
 
           spec = {
-            project = "argo-app-proj-dev"
+            project = "env-dev"
 
             source = {
               repoURL        = "https://github.com/fsismondi/example-worflow-2-apps.git"
@@ -145,7 +145,7 @@ module "cluster" {
     },
     {
       metadata = {
-        name      = "argo-app-set-int"
+        name      = "env-int"
         namespace = "argocd"
 
         annotations = {
@@ -174,7 +174,7 @@ module "cluster" {
           }
 
           spec = {
-            project = "argo-app-proj-int"
+            project = "env-int"
 
             source = {
               repoURL        = "https://github.com/fsismondi/example-worflow-2-apps.git"
@@ -209,7 +209,7 @@ module "cluster" {
     },
     {
       metadata = {
-        name      = "argo-app-set-prod"
+        name      = "env-prod"
         namespace = "argocd"
 
         annotations = {
@@ -238,7 +238,7 @@ module "cluster" {
           }
 
           spec = {
-            project = "argo-app-proj-prod"
+            project = "env-prod"
 
             source = {
               repoURL        = "https://github.com/fsismondi/example-worflow-2-apps.git"
