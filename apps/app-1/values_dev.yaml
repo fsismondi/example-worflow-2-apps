@@ -1,6 +1,1 @@
 replicaCount: 1
-ingress:
-  enabled: true
-  # hosts:
-  #   - host: chart-example.local
-  #     paths: []
