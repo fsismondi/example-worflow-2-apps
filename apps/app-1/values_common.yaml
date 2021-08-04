@@ -4,3 +4,7 @@ demo-app:
   env:
     - name: "test_name"
       value: "test_val"
+
+app_env:
+  - name: "env_var_for_pod"
+    value: "test_val"
