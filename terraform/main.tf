@@ -196,7 +196,7 @@ module "cluster" {
             syncPolicy = {
               automated = {
                 prune    = true
-                selfHeal = false
+                selfHeal = true
               }
 
               syncOptions = [
@@ -260,7 +260,7 @@ module "cluster" {
             syncPolicy = {
               automated = {
                 prune    = true
-                selfHeal = false
+                selfHeal = true
               }
 
               syncOptions = [
