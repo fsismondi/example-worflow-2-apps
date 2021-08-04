@@ -52,7 +52,22 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-env: {}
+env: []
+  # Additional container environment variables
+  #
+  # You specify this manually like you would a raw deployment manifest.
+  # This means you can bind in environment variables from secrets.
+  #
+  # e.g. static environment variable:
+  #  - name: DEMO_GREETING
+  #    value: "Hello from the environment"
+  #
+  # e.g. secret environment variable:
+  # - name: USERNAME
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: mysecret
+  #       key: username
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
