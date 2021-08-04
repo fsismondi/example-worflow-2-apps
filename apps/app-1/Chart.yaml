@@ -1,0 +1,7 @@
+---
+apiVersion: "v2"
+name: "app-1"
+version: 0
+dependencies:
+  - name: "demo-app"
+    repository: "file://../../charts/app-1"
