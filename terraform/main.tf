@@ -106,7 +106,7 @@ module "cluster" {
 
         template = {
           metadata = {
-            name = "{{path.basename}}"
+            name = "{{path.basename}}-dev"
           }
 
           spec = {
@@ -170,7 +170,7 @@ module "cluster" {
 
         template = {
           metadata = {
-            name = "{{path.basename}}"
+            name = "{{path.basename}}-int"
           }
 
           spec = {
@@ -234,7 +234,7 @@ module "cluster" {
 
         template = {
           metadata = {
-            name = "{{path.basename}}"
+            name = "{{path.basename}}-prod"
           }
 
           spec = {

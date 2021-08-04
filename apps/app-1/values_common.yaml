@@ -1,1 +1,4 @@
 message: "This is my new message"
+env:
+  - name: "test_name"
+    value: "test_val"
